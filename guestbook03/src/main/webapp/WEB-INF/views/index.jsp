@@ -1,8 +1,10 @@
 <%@ taglib uri="http://java.sun.com/jsp/jstl/core" prefix="c"%>
-<%@ taglib uri="http://java.sun.com/jsp/jstl/functions" prefix="fn"%>  
+<%@ taglib uri="http://java.sun.com/jsp/jstl/functions" prefix="fn"%>
 <%@ taglib uri="http://java.sun.com/jsp/jstl/fmt" prefix="fmt"%>
 <%@ page language="java" contentType="text/html; charset=UTF-8"
 	pageEncoding="UTF-8"%>
+
+<% pageContext.setAttribute("newLine", "\n"); %>
 
 <html>
 
@@ -29,22 +31,24 @@
 			</tr>
 		</table>
 	</form>
-	<br>
-
-	<table width=510 border=1>
-		<tr>
-			<td>[1]</td>
-			<td>신정은</td>
-			<td>2020-02-24</td>
-			<td>
-				<input type="hidden" name="a" value="deleteform">
-					<a href="${pageContext.request.contextPath}/delete/10">삭제</a>
-			<td>
-		</tr>
-		<tr>
-			<td colspan=4>내용입니다</td>
-		</tr>
-	</table>
-
+	<c:set var="count" value="${fn:length(list) }" />
+	<c:forEach items="${list }" var="vo" varStatus="status">
+		<br>
+		<table width=510 border=1>
+			<tr>
+				<td>[${count-status.index }]</td>
+				<td>${vo.name }</td>
+				<td>${ vo.regDate}</td>
+				<td><input type="hidden" name="a" value="deleteform"> <a
+					href="${pageContext.request.contextPath}/delete/${vo.no}">삭제</a>
+				<td>
+			</tr>
+			<tr>
+				<td colspan=4>
+					${fn:replace(vo.contents, newLine, "<br>") }
+				</td>
+			</tr>
+		</table>
+	</c:forEach>
 </body>
 </html>
