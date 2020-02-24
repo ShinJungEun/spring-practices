@@ -12,7 +12,7 @@
 </head>
 <body>
 
-	<form action="${pageCOntext.request.contextPath}/add" method="post">
+	<form action="${pageContext.request.contextPath}/add" method="post">
 		<table border=1 width=500>
 			<tr>
 				<td>이름</td>
@@ -38,8 +38,8 @@
 			<td>2020-02-24</td>
 			<td>
 				<input type="hidden" name="a" value="deleteform">
-					<a href="${pageCOntext.request.contextPath}/delete/10">삭제</a>
-			/td>
+					<a href="${pageContext.request.contextPath}/delete/10">삭제</a>
+			<td>
 		</tr>
 		<tr>
 			<td colspan=4>내용입니다</td>
