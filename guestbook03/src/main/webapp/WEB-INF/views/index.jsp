@@ -39,8 +39,8 @@
 				<td>[${count-status.index }]</td>
 				<td>${vo.name }</td>
 				<td>${ vo.regDate}</td>
-				<td><input type="hidden" name="a" value="deleteform"> <a
-					href="${pageContext.request.contextPath}/delete/${vo.no}">삭제</a>
+				<td> 
+				<a href="${pageContext.request.contextPath}/delete/${vo.no}">삭제</a>
 				<td>
 			</tr>
 			<tr>
