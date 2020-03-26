@@ -13,8 +13,8 @@
   	<module>fileupload</module>
   	<module>logex</module>
   	<module>aoptest</module>
-  	<module>container</module>
   	<module>hellospring04</module>
+  	<module>container</module>
   </modules>
   
 </project>
