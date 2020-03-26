@@ -8,7 +8,7 @@
 		<artifactId>spring-practices</artifactId>
 		<version>0.0.1-SNAPSHOT</version>
 	</parent>
-	<artifactId>hellospring</artifactId>
+	<artifactId>hellospring03</artifactId>
 
 	<packaging>war</packaging>
 
@@ -72,7 +72,7 @@
 	</dependencies>
 
 	<build>
-		<finalName>hellospring</finalName>
+		<finalName>hellospring03</finalName>
 		<sourceDirectory>src/main/java</sourceDirectory>
 		<resources>
 			<resource>
@@ -118,7 +118,7 @@
 				<artifactId>tomcat-maven-plugin</artifactId>
 				<configuration>
 					<url>http://192.168.1.99:8080/manager/text</url>
-					<path>/hellospring</path>
+					<path>/hellospring03</path>
 					<username>admin</username>
 					<password>admin</password>
 				</configuration>
