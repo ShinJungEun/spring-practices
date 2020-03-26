@@ -15,6 +15,7 @@
   	<module>aoptest</module>
   	<module>hellospring04</module>
   	<module>container</module>
+  	<module>hellospring05</module>
   </modules>
   
 </project>
